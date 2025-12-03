@@ -91,9 +91,9 @@ addMSByte:
 moveChenilars:
     movf 0x22, W     ; Get back 0x22
     
-    btfss PORTA, 6 ; Teste si PORTA6, button1 != 0
+    btfss PORTA, 6   ; Teste si PORTA6, button1 != 0
     rrncf 0x22	     ; move all bits of 0x22 to the left
-    btfss PORTA, 7 ; Teste si PORTA7, button0 != 0
+    btfss PORTA, 7   ; Teste si PORTA7, button0 != 0
     rlncf 0x22	     ; move all bits of 0x22 to the left
     movff 0X22, LATC ; Show LED
     
